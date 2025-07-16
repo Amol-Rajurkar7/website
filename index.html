@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amol Rajurkar - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <div class="header-left">
+      <h1>Amol Rajurkar</h1>
+      <div class="contact-links">
+        <a href="??" target="_blank">🔗LinkedIn</a>
+        <a href="mailto:amolrajurkar7@gmail.com">📧amolrajurkar7@gmail.com</a>
+        <a>📞+91 8668749612</a>
+      </div>
+    </div>
+
+    
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#qualifications">Qualifications</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+         Hi, I’m Amol Rajurkar — a passionate and motivated fresher looking to start my
+         career as a JavaScript Developer. I enjoy building interactive, responsive web applications and
+         have a solid understanding of HTML, CSS, and JavaScript fundamentals.<br><br>
+         I have developed small projects to strengthen my skills, and I’m eager 
+         to work in a team where I can learn from experienced developers, 
+         contribute clean code, and grow into a full-stack role over time.
+         I’m excited to bring my dedication and curiosity to a dynamic company
+         and build real-world solutions that make a difference.</p> </section>
+
+
+
+
+<section id="qualifications">
+  <h2>Qualifications</h2>
+  <div class="qualifications">
+
+    <div class="qualification-item">
+      <div class="qualification-date">2013 – 2016</div>
+      <div class="qualification-content">
+        <h3>Diploma in CSE — Gramin Polytechnic Vishnupuri (MSBTE Board)</h3>
+        <p>During my diploma, I had a great time with friends and actively participated in college activities.</p>
+      </div>
+    </div>
+
+    <div class="qualification-item">
+      <div class="qualification-date">2016 – 2019</div>
+      <div class="qualification-content">
+        <h3>B.E.I.T — MGM's College Of Engineering Nanded</h3>
+        <p>During my degree, I thoroughly enjoyed my time with friends and actively participated in various activities. and captained the football team in my final year.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="skills" class="white">
+  <h2>Skills</h2>
+  <div class="skill">
+    <div class="skill-name">HTML</div>
+    <div class="skill-bar">
+      <div class="skill-per" style="width: 90%;">90%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-name">CSS</div>
+    <div class="skill-bar">
+      <div class="skill-per" style="width: 65%;">65%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-name">JavaScript</div>
+    <div class="skill-bar">
+      <div class="skill-per" style="width: 75%;">75%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-name">React</div>
+    <div class="skill-bar">
+      <div class="skill-per" style="width: 60%;">60%</div>
+    </div>
+  </div>
+</section>
+
+
+
+   <section id="projects" >
+  <h2>My Projects </h2>
+  <div class="project-cards">
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="./todolist.jpg" >
+      </div>
+      <h3>Simple To-Do list</h3>
+      <p>Simple To-Do List is created using HTML,CSS and Vanilla JavaScript.
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="auth.jpg">
+      </div>
+      <h3>Simple Authentication Page</h3>
+      <p>Simple Authentication page where Username and Password is checked with pre-defined Userame and Password.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="quotegenerator.jpg" >
+      </div>
+      <h3>Random Quotes Generators</h3>
+      <p>Display new quotes with author name everytime the button is clicked. Created using HTML, CSS, Vanilla JavaScript.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form class="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p class="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Amol Rajurkar. All rights reserved.
+  </footer>
+
+
+  <script src="portfolio.js"></script>
+ <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav.nav');
+  const navLinks = nav.querySelectorAll('a');
+
+  // Toggle nav when hamburger is clicked
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+
+  // Close nav when any link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show');
+    });
+  });
+</script>
+
+
+</body>
+</html>

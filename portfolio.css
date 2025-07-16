@@ -1,0 +1,509 @@
+:root {
+  --primary-color: #121212;     /* Dark background */
+  --accent-color: #f39c12;      /* Bright, modern orange */
+  --secondary-color: #e67e22;   /* Darker orange for hover */
+  --bg-color: #1e1e1e;          /* Slightly lighter dark background */
+  --text-color: #ffffff;        /* White text */
+  --light-bg: #1a1a1a;          /* Cards/forms background */
+  --border-color: #333333;      /* Subtle dark border */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: var(--primary-color);
+  padding: 1rem 2rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left h1 {
+  font-size: 2rem;
+}
+
+.contact-links {
+  margin-top: 0.5rem;
+}
+
+.contact-links a {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+nav a {
+  margin-left: 2rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.01);
+  background: var(--light-bg);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card,
+.qualification-item {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 6px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover,
+.qualification-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.qualifications {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.qualification-item {
+  border-left: 4px solid var(--accent-color);
+  padding: 1rem 1.5rem;
+  background: var(--light-bg);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.qualification-item:hover {
+  background: var(--primary-color);
+}
+
+.qualification-date {
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.qualification-content h3 {
+  color: var(--text-color);
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.qualification-content p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.qualification-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+form {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+form button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--secondary-color);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--primary-color);
+}
+
+#form-status {
+  margin-top: 1rem;
+  color: #0A84FF;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--border-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-date.purple {
+  background: purple;
+}
+
+.timeline-content {
+  background: var(--light-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+#projects {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#projects .sub-heading {
+  color: var(--accent-color);
+}
+
+.project-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card.orange {
+  background: orange;
+  color: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card.orange .project-icon {
+  border-color: #fff;
+}
+
+.project-icon img {
+  width: 200%;
+  height: auto;
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project-card.orange a {
+  color: #fff;
+}
+
+.btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn:hover,
+form button:hover {
+  background: var(--secondary-color);
+}
+
+#skills {
+  margin: 3rem 0;
+}
+
+#skills h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.skill-bar {
+  background: var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-per {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.5rem;
+  text-align: right;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
+
+/* ✅ Mobile: Nav stays horizontal with spacing */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .header-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-links {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-links a {
+    display: inline-block;
+    margin: 0.3rem 0.5rem 0.3rem 0;
+    font-size: 0.9rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between links */
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0; /* Remove vertical spacing */
+  }
+}
+
+/* Hide hamburger by default */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  nav.nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px; /* adjust based on your header height */
+    left: 0;
+    padding: 1rem 2rem;
+    z-index: 998;
+  }
+
+  nav.nav.show {
+    display: flex;
+  }
+
+  nav.nav a {
+    margin: 0.5rem 0;
+  }
+
+  .header-top {
+    position: relative;
+  }
+}
