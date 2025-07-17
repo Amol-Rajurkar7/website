@@ -507,18 +507,25 @@ form button:hover {
     position: relative;
   }
 }
-.btn {
+
+
+.resume-btn-wrapper {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.btn-resume {
   display: inline-block;
-  padding: 10px 16px;
-  background-color: #007bff;
-  color: orange;
-  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: orange;
+  color: white;
   text-decoration: none;
-  font-weight: 400;
-  transition: background 0.3s;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.btn-resume:hover {
+  background-color: darkorange;
 }
-
